@@ -1,0 +1,21 @@
+CREATE TABLE employee 
+(
+ EMPLOYEE_ID NUMBER(4) NOT NULL,
+ EMPLOYEE_NAME VARCHAR2(20) NOT NULL,
+ EMPLOYEE_ADDRESS VARCHAR2(20),
+ DOB DATE NOT NULL,
+ DOJ DATE NOT NULL,
+ SALARY NUMBER
+)
+
+INSERT INTO employee values(1,'Raashika','no-2 pl street','05-19-1999','04-19-2020',20000)
+
+INSERT INTO employee values(2,'Sheela','no-5 cross street','09-22-1992','05-02-2017',22000)
+
+INSERT INTO employee values(3,'Prince','no-3 main uyt street','03-14-1995','09-13-2016',24000)
+
+INSERT INTO employee values(4,'Dheera','no-7 ranchi street','07-07-1990','02-11-2017',26000)
+
+INSERT INTO employee values(5,'Rishu','no-2 north street','08-04-1994','05-29-2018',28000)
+
+select * from employee ORDER BY EMPLOYEE_ID
