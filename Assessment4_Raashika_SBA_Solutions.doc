@@ -1,0 +1,148 @@
+Step1: Log In
+Log in by entering your log-in name/password. In the menu on the lower-left, click
+
+Step2: Create directories
+1. Start a terminal window by clicking K ? System ? Console
+1.Check your current location. What does it say?
+Ans : pwd
+/home/raashika
+2. If you are not in your home directory, change your current location to your home
+directory.
+Ans :cd ..
+/home
+3. List all files in your current location. How many files do you have?
+Ans : ls -la
+ls -l :total  files 10
+ls -la:total files 18
+4. If you don't already have one, create a directory called “labs”, then cd to “labs”, and
+create a directory called “linux_lab”.
+Ans :mkdir labs
+         cd labs
+         mkdir linux_ lab
+5. Change directory to linux_lab.
+Ans :cd linux_lab
+6. Check your current location.
+Ans :pwd
+/home/raashu/labs/linux_lab
+7. Create subdirectories called michigan, indiana, and ohio under this directory.
+Ans : mkdir michigan
+          mkdir indiana
+           mkdir ohio
+8. List all files in your current location and check that they should be 3 subdirectories.
+Ans :ls -l
+subdirectories /indiana/michigan/ohio
+9. Now move to the michigan directory with the cd command.
+Ans :cd michigian
+10. Create 2 subdirectories called detroit and lansing.
+Ans : mkdir detroit
+          mkdir  lansing
+11. Examine the differences between ls and ls –l. What does column 5 show ?
+Ans :ls -l  shows the list of files with complete “details”
+column 5: shows the size of the file or directory
+12. Move to the indiana subdirectory from michigan. 
+Ans :cd ..
+cd indiana
+13. Create other 2 subdirectories under Indiana : Indianapolis and tipton
+Ans : 
+          mkdir indianapolis
+          mkdir tipton
+14. List all files, including hidden files. What is the .. file?
+Ans : ls -l
+  ..file is a parent directory indicate hidden file
+15. Move to the ohio subdirectory.
+Ans : cd ..            
+          cd ohio
+16. Create other 2 subdirectories. What happens if you type cd ashland?
+Ans : mkdir x
+         mkdir y
+        “bash: cd:ashland: no such file or directory” this is the error shown when trying giving cd ashland
+17.  Create a text file
+a)  Type your name and your address.
+b) Save the document and name it “address.txt” in your linux_lab folder.
+Ans:   cd ..
+touch address.txt
+ cat > address.txt
+             name:Raashika
+             Address:chennai
+          
+18. Look at the contents of address.txt from the command line.
+Ans : cat address.txt
+                              
+19. Copy your “address.txt” file to the assigned subdirectories (lansing, indianapolis, and
+columbus). 
+Ans : cp address.txt/home/Raashika/labs/linux_lab/michigan/lansing
+          cp address,txt/home/Raashika/labs/linux_lab/indiana/indianapolis
+mkdir columbus
+cp address.txt/Raashika/labs/linux_lab/columbus
+
+
+20. Write down to revoke write and execute from the address file from everyone ?
+Ans : chmod a-wx address.txt
+
+21. Write down to grant all the permission to user for address file (Use Digits)
+Ans :chmod 777 address.txt
+
+22. Write down a command to give read permission to address file to a user “Kapoor” ?
+Ans :sudo adduser Kapoor
+ setfacl -m u:Kapoor:r address.txt
+
+23. Rename address.txt to mycurrentaddress.txt
+Ans : mv address.txt.mycurrentaddress.txt
+
+24. use grep to print the city name complete line from mycurrentaddress.txt
+Ans : grep -i “chennai” mycurrentaddress.txt
+
+25. Write the command to Install banner command ?
+Ans : sudo  apt install sysvbanner
+
+--------------YAML & JSON -----------------
+
+Create a YAML and JSON file for storing productdetails such as product, price, quantity, orderNumber .
+ OrderNumber will further divided into orderDate and OrderInvoiceValue.
+product will be further divided into productName productDescription and productRating
+Solution 1 (JSON): 
+{
+
+  “product”:[
+{
+“productName”: ”camelin pencil”
+},
+{
+“product description”: null,
+“product details”:{
+“product specs”:”0.7mm”,
+“product colour”:”pink”
+“productrating”:4.5
+
+},
+],
+“price”:”20 per unit”
+“quantity”:{
+“mfd qty”:
+“sold qty”:
+}, 
+     “orderNumber”:{
+         “orderDate”: “04/09/2020”,
+“orderInvoiceValue”:”455678”
+}
+}
+
+
+Solution 2 (YAML):
+---
+product Details:
+ -product:
+             -productName :camelin pencils
+             -product Description:
+product Details:
+               product specs:0.7 mm
+               product colour:pink
+              -product Rating:4.5
+                
+-price:20
+-quantity
+mfd qty: 6890
+sold qty:700
+-orderNumber:
+-orderDate:04/09/2020
+-orderInvoiceValue: 4556788
