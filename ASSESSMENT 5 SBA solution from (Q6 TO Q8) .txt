@@ -1,0 +1,31 @@
+Please go through the following points before you start:
+
+Open go to meeting and record your exercise solutions:
+This assessment assumes that you have one VM created and Windows 10 installed.
+After you are done with the exercise solution, stop the recording and upload the link in git hub.
+The file name should be <<Name>>_02_Aug_SBA_Solution.txt
+Please do the following in the recorded sessions:
+Please note that you don’t have to write solution here, but do live in recorded session
+
+
+Question 1: create a network adaptor using PowerShell. The network adaptor name should be “MyLatestAdaptor”
+ANS:refer recording
+Question 2: Verify the network adaptor “MyLatestAdaptor” created in PowerShell
+ANS:refer recording
+Question 3: Verify the network adaptor “MyLatestAdaptor” in Hyper –V manager
+ANS:refer recording
+Question 4: Change your VM network adaptor to use “MyLatestAdaptor”
+ANS:refer recording
+Question 5: Create a virtual hard disk of size 35 GB and name it as “MyAddedSpace”
+ANS:refer recording
+
+Question 6: Open your VM and check the size of current hard disk
+ANS:
+open VM go to start right click and check the Disk management and in that check for the size of the current hard disk which is (40gb)we created before
+Question 7:  Add the new hard disk space of 35 GB to existing VM
+ANS: first right click the VM and choose IDE controller 1 and in that add hard disk and select “my added space” with 35 gb which we created apply and ok.
+Question 8: The additional 35 GB hard disk should be mounted as Y: drive in the virtual machine.
+ANS:
+select virtual machine click to connect and go to the disk management  it shows a pop up click ok and then click the 35 gb hard disk created named “my added space” right click choose " new simple volume" click next and give the mounted name as Y and save it.
+
+Stop the recording and upload the link in the GitHub.
