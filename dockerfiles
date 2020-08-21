@@ -1,0 +1,7 @@
+docker rm -f $(docker ps -a -q)
+
+docker build /home/ubuntu1/jenkins/workspace/git1-build -t website 
+
+docker run -it -d --name web1 -p 8082:80 website
+
+docker pull alpine
